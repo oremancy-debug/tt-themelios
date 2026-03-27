@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Language Switcher - Pill Button Design
+   ========================================================================== */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.lang-inline-btn {
+    padding: 0.3rem 0.65rem;
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+.lang-inline-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-inline-btn.active {
+    color: #fff;
+    background: var(--color-accent, #2c3e50);
+    border-color: var(--color-accent, #2c3e50);
+}
+
+/* Scrolled header - dark text on white bg */
+.header.scrolled .lang-inline-btn {
+    color: #6b7280;
+    border-color: #d1d5db;
+    background: transparent;
+}
+
+.header.scrolled .lang-inline-btn:hover {
+    color: #374151;
+    border-color: #9ca3af;
+    background: #f3f4f6;
+}
+
+.header.scrolled .lang-inline-btn.active {
+    color: #fff;
+    background: #374151;
+    border-color: #374151;
+}
+
+/* Hide separator spans (no longer needed) */
+.lang-separator {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .language-switcher {
+        display: none;
+    }
+}
